@@ -227,130 +227,17 @@
         }
       ],
       "output_schema": {
-        "content": [
-          {
-            "id": "",
-            "oldIds": [],
-            "addresses": [
-              {
-                "id": "",
-                "type": "",
-                "flags": [],
-                "value": "",
-                "createdAt": "",
-                "networkId": "",
-                "collectors": [
-                  {
-                    "customerId": "",
-                    "midpointId": "",
-                    "collectorId": ""
-                  }
-                ],
-                "timeRanges": [
-                  {
-                    "from": ""
-                  }
-                ],
-                "associatedAtTimeOfRequest": ""
-              }
-            ],
-            "createdAt": "",
-            "attributes": {
-              "tags": [
-              ],
-              "zoneId": "",
-              "host.id": "",
-              "host.ip": [],
-              "host.mac": [],
-              "labels.x": "",
-              "labels.y": "",
-              "host.name": "",
-              "host.type": "",
-              "host.class": "",
-              "host.domain": [],
-              "host.vendor": "",
-              "labels.Zone": "",
-              "host.os.name": "",
-              "host.zone.id": "",
-              "host.zone_id": "",
-              "host.hostname": [],
-              "observed.tags": [],
-              "override.tags": [],
-              "host.last_seen": "",
-              "host.os.family": "",
-              "host.os.kernel": "",
-              "host.zone.name": "",
-              "labels.Country": "",
-              "host.address_id": [],
-              "observed.zoneId": "",
-              "related.network": [],
-              "labels.Monitored": "",
-              "labels.zone_name": "",
-              "related.observer": [],
-              "labels.ObservedBy": [],
-              "override.labels.x": "",
-              "override.labels.y": "",
-              "labels.Criticality": "",
-              "observed.host.name": "",
-              "observed.host.type": "",
-              "override.host.type": "",
-              "host.hardware.model": "",
-              "labels.System Owner": "",
-              "observed.host.class": "",
-              "host.hardware.family": "",
-              "host.hardware.serial": "",
-              "host.hardware.series": "",
-              "host.hardware.vendor": "",
-              "labels.Monitored-MAC": "",
-              "observed.host.vendor": "",
-              "override.labels.Zone": "",
-              "labels.CrowdStrike ID": "",
-              "observed.host.os.name": "",
-              "observed.host.zone.id": "",
-              "observed.host.zone_id": "",
-              "observed.host.last_seen": "",
-              "observed.host.os.family": "",
-              "observed.host.os.kernel": "",
-              "override.labels.Country": "",
-              "labels.Monitored-MACPeer": "",
-              "labels.hardware.fidelity": "",
-              "observed.labels.Monitored": "",
-              "observed.labels.zone_name": "",
-              "observed.labels.ObservedBy": [],
-              "override.labels.Criticality": "",
-              "labels.CrowdStrike Last Seen": "",
-              "observed.host.hardware.model": "",
-              "override.host.hardware.model": "",
-              "override.labels.System Owner": "",
-              "observed.host.hardware.serial": "",
-              "observed.host.hardware.vendor": "",
-              "observed.labels.Monitored-MAC": "",
-              "override.host.hardware.family": "",
-              "override.host.hardware.serial": "",
-              "override.host.hardware.series": "",
-              "host.hardware.firmware.version": "",
-              "override.labels.CrowdStrike ID": "",
-              "labels.AttributesLastObservedDate": "",
-              "observed.labels.Monitored-MACPeer": "",
-              "observed.labels.hardware.fidelity": "",
-              "override.labels.hardware.fidelity": "",
-              "override.labels.CrowdStrike Last Seen": "",
-              "override.host.hardware.firmware.version": "",
-              "observed.labels.AttributesLastObservedDate": ""
-            },
-            "lastSeenAt": "",
-            "timeRanges": [
-              {
-                "from": ""
-              }
-            ],
-            "mostRecentAddressBeforeMaskByType": {}
-          }
-        ],
-        "pageSize": "",
+        "content": [],
         "pageNumber": "",
+        "pageSize": "",
         "totalCount": "",
-        "totalPages": ""
+        "totalPages": "",
+        "sorts": [
+          {
+            "field": "",
+            "descending": ""
+          }
+        ]
       }
     },
     {
@@ -522,7 +409,7 @@
       "description": "Retrieves a details for one or more notifications from Dragos Sitestore based on the notification ID's and other input parameters that you have specified.",
       "parameters": [
         {
-          "title": "Notification ID's",
+          "title": "Notification IDs",
           "description": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos Sitestore.",
           "type": "text",
           "name": "ids",
@@ -552,7 +439,8 @@
           "value": true,
           "tooltip": "If you selected, conversations should be included with the notification. By default, this option is set to True."
         }
-      ]
+      ],
+      "output_schema": []
     },
     {
       "title": "Get Statistics of Notification",

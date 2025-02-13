@@ -330,7 +330,6 @@ def execute_an_api_call(config, params):
         payload = json.dumps(params.get("payload")) if params.get("payload") else None
         logger.debug("Payload: {0}".format(payload))
         response = dg.make_rest_call(endpoint, method=http_method, params=query_params, data=json.dumps(payload))
-        logger.debug("Response: {0}".format(response))
         return response
     except Exception as err:
         logger.exception("{0}".format(str(err)))
