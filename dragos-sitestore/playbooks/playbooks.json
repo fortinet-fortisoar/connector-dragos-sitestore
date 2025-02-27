@@ -34,7 +34,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "createdAtAfter": "",
@@ -64,9 +64,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves all details associated with an assets from Dragos Sitestore based on the filter parameters that you have specified.",
+          "description": "Retrieves all details associated with an assets from Dragos SiteStore based on the filter parameters that you have specified.",
           "name": "Get All Assets",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -118,7 +118,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "filter": "",
@@ -142,9 +142,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves all details associated with an notifications from Dragos Sitestore based on the filter parameters that you have specified.",
+          "description": "Retrieves all details associated with an notifications from Dragos SiteStore based on the filter parameters that you have specified.",
           "name": "Get All Notifications",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -196,7 +196,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "ids": "",
@@ -214,9 +214,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves a details for one or more notifications from Dragos Sitestore based on the notification ID's and other input parameters that you have specified.",
+          "description": "Retrieves a details for one or more notifications from Dragos SiteStore based on the notification ID's and other input parameters that you have specified.",
           "name": "Get Notifications Details",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -268,7 +268,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "groupBy": "",
@@ -285,9 +285,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves a statistics for a specific notification from Dragos Sitestore based on the group by or filter parameters that you have specified.",
+          "description": "Retrieves a statistics for a specific notification from Dragos SiteStore based on the group by or filter parameters that you have specified.",
           "name": "Get Statistics of Notification",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -339,7 +339,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "sort_by": "",
@@ -368,9 +368,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves all details associated with an vulnerabilities from Dragos Sitestore based on the filter parameters that you have specified.",
+          "description": "Retrieves all details associated with an vulnerabilities from Dragos SiteStore based on the filter parameters that you have specified.",
           "name": "Get All Vulnerabilities",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -422,7 +422,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "sort_by": "",
@@ -451,9 +451,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves all detections details associated with an vulnerability from Dragos Sitestore based on the filter parameters that you have specified.",
+          "description": "Retrieves all detections details associated with an vulnerability from Dragos SiteStore based on the filter parameters that you have specified.",
           "name": "Get All Vulnerability Detections",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -505,7 +505,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "includeFields": "",
@@ -536,9 +536,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Retrieves all detections from Dragos Sitestore based on the filter parameters that you have specified.",
+          "description": "Retrieves all detections from Dragos SiteStore based on the filter parameters that you have specified.",
           "name": "Get All Detections",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -590,7 +590,7 @@
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Dragos Sitestore",
+                "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
                   "method": "",
@@ -609,9 +609,9 @@
             }
           ],
           "triggerLimit": null,
-          "description": "Sends an API request to any Dragos Sitestore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
+          "description": "Sends an API request to any Dragos SiteStore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
           "name": "Execute an API Request",
-          "tag": "#Dragos Sitestore",
+          "tag": "#Dragos SiteStore",
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
@@ -635,8 +635,8 @@
           ]
         }
       ],
-      "name": "Sample - Dragos Sitestore - 1.0.0",
-      "description": "",
+      "name": "Sample - Dragos SiteStore - 1.0.0",
+      "description": "Dragos SiteStore is a key component of the Dragos Platform, designed to enhance cybersecurity for industrial control systems (ICS) and operational technology (OT) environments. It serves as the management and reporting console for data collected by Dragos sensors, providing comprehensive visibility and threat detection capabilities.",
       "visible": true,
       "recordTags": [
         "Dragos",

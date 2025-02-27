@@ -152,15 +152,35 @@ def get_assets(config, params):
         raise ConnectorError(str(err))
 
 
+def build_query(filter=None, createdAtAfter=None, state=None):
+    conditions = []
+
+    # Check if a filter is provided and append it directly
+    if filter:
+        conditions.append(filter)
+
+    # Check if a createdAtAfter is provided and append it directly
+    if createdAtAfter:
+        conditions.append(f"createdAt >= \"{createdAtAfter}\"")
+
+    # Check if state is provided and add to conditions
+    if state:
+        conditions.append(f"state == \"{state}\"")
+
+    return " and ".join(conditions) if conditions else ""
+
+
 def get_notifications(config, params):
     try:
         dg = Dragos(config)
         endpoint = 'notifications/api/v2/notification'
+        filter = build_query(filter=params.get('filter'), createdAtAfter=params.get('createdAtAfter'),
+                             state=params.get('state'))
         payload = {
             "pageNumber": params.get('pageNumber'),
             "pageSize": params.get('pageSize'),
             "offset": params.get('offset'),
-            "filter": params.get('filter'),
+            "filter": filter,
             "resolveChildrenDepth": params.get('resolveChildrenDepth'),
             "sorts": params.get('sorts'),
             "sortField": NOTIFICATION_SORT.get(params.get('sortField')) if params.get('sortField') else "",

@@ -1,10 +1,10 @@
 {
   "name": "dragos-sitestore",
   "version": "1.0.0",
-  "label": "Dragos Sitestore",
-  "description": "",
+  "label": "Dragos SiteStore",
+  "description": "Dragos SiteStore is a key component of the Dragos Platform, designed to enhance cybersecurity for industrial control systems (ICS) and operational technology (OT) environments. It serves as the management and reporting console for data collected by Dragos sensors, providing comprehensive visibility and threat detection capabilities.",
   "publisher": "Fortinet",
-  "cs_approved": false,
+  "cs_approved": true,
   "cs_compatible": true,
   "contributor": "",
   "help_online": "",
@@ -15,13 +15,13 @@
     "fields": [
       {
         "title": "Server URL",
-        "description": "Specify the URL of the Dragos Sitestore server to connect and perform automated operations.",
+        "description": "Specify the URL of the Dragos SiteStore server to connect and perform automated operations.",
         "type": "text",
         "name": "server_url",
         "required": true,
         "editable": true,
         "visible": true,
-        "tooltip": "Specify the URL of the Dragos Sitestore server to connect and perform automated operations."
+        "tooltip": "Specify the URL of the Dragos SiteStore server to connect and perform automated operations."
       },
       {
         "title": "API ID",
@@ -63,7 +63,7 @@
       "category": "investigation",
       "annotation": "get_assets",
       "enabled": true,
-      "description": "Retrieves all details associated with an assets from Dragos Sitestore based on the filter parameters that you have specified.",
+      "description": "Retrieves all details associated with an assets from Dragos SiteStore based on the filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Created After",
@@ -106,14 +106,14 @@
           "tooltip": "Select the date and time to filter the results, including only items that last seen before the specified timestamp."
         },
         {
-          "title": "Is Deleted",
-          "description": "Select the option to include deleted assets in the results from Dragos Sitestore.",
-          "type": "text",
+          "title": "Include Deleted Assets",
+          "description": "Select the option to include deleted assets in the results from Dragos SiteStore.",
+          "type": "checkbox",
           "name": "is_deleted",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the option to include deleted assets in the results from Dragos Sitestore."
+          "tooltip": "Select the option to include deleted assets in the results from Dragos SiteStore."
         },
         {
           "title": "Overlaps Address Start DateTime",
@@ -186,7 +186,7 @@
           "tooltip": "Select a checkbox to order the retrieved assets. If selected, they will be retrieved in descending order."
         },
         {
-          "title": "PageSize",
+          "title": "Page Size",
           "description": "Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
@@ -196,7 +196,7 @@
           "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
-          "title": "pageNumber",
+          "title": "Page Number",
           "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
@@ -217,13 +217,13 @@
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter assets in Dragos Sitestore.",
+          "description": "Specify additional parameters with which to filter assets in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter assets in Dragos Sitestore."
+          "tooltip": "Specify additional parameters with which to filter assets in Dragos SiteStore."
         }
       ],
       "output_schema": {
@@ -246,7 +246,7 @@
       "category": "investigation",
       "annotation": "get_notifications",
       "enabled": true,
-      "description": "Retrieves all details associated with an notifications from Dragos Sitestore based on the filter parameters that you have specified.",
+      "description": "Retrieves all details associated with an notifications from Dragos SiteStore based on the filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Filter",
@@ -257,7 +257,31 @@
           "visible": true,
           "editable": true,
           "tooltip": "Specify a filter string in FIQL format based on which you want to retrieve notifications. For ex, syntax: fieldname operator value",
-          "placeholder": "For ex: severity == 5"
+          "placeholder": "For ex: severity == 1"
+        },
+        {
+          "title": "Created After",
+          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
+          "type": "datetime",
+          "name": "createdAtAfter",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
+        },
+        {
+          "title": "State",
+          "description": "Specify the state based on which you want to retrieve notifications from Dragos SiteStore. Possible values are RESOLVED or UNRESOLVED",
+          "type": "select",
+          "name": "state",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "tooltip": "Specify the state based on which you want to retrieve notifications from Dragos SiteStore. Possible values are RESOLVED or UNRESOLVED",
+          "options": [
+            "RESOLVED",
+            "UNRESOLVED"
+          ]
         },
         {
           "title": "Sorts",
@@ -326,17 +350,27 @@
           "tooltip": "Specify the number of steps deep to recursively resolve child notifications"
         },
         {
-          "title": "PageSize",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response.",
+          "title": "Offset",
+          "description": "Specify the number of records to skip when retrieving records from Dragos SiteStore server.",
+          "type": "integer",
+          "name": "offset",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "tooltip": "Specify the number of records to skip when retrieving records from Dragos SiteStore server."
+        },
+        {
+          "title": "Page Size",
+          "description": "Specify the maximum number of results this operation should return, per page, in the response. Note: By default, it will be fetch 10 records and maximum 1000 records.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
+          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response. By default, it will be fetch 10 records and maximum 1000 records."
         },
         {
-          "title": "pageNumber",
+          "title": "Page Number",
           "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
@@ -357,13 +391,13 @@
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter notifications in Dragos Sitestore.",
+          "description": "Specify additional parameters with which to filter notifications in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter notifications in Dragos Sitestore."
+          "tooltip": "Specify additional parameters with which to filter notifications in Dragos SiteStore."
         }
       ],
       "output_schema": {
@@ -406,17 +440,17 @@
       "category": "investigation",
       "annotation": "get_notification_details",
       "enabled": true,
-      "description": "Retrieves a details for one or more notifications from Dragos Sitestore based on the notification ID's and other input parameters that you have specified.",
+      "description": "Retrieves a details for one or more notifications from Dragos SiteStore based on the notification ID's and other input parameters that you have specified.",
       "parameters": [
         {
           "title": "Notification IDs",
-          "description": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos Sitestore.",
+          "description": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos SiteStore.",
           "type": "text",
           "name": "ids",
           "required": true,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos Sitestore."
+          "tooltip": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos SiteStore."
         },
         {
           "title": "Resolve Children Depth",
@@ -448,7 +482,7 @@
       "category": "investigation",
       "annotation": "get_stats_of_notification",
       "enabled": true,
-      "description": "Retrieves a statistics for a specific notification from Dragos Sitestore based on the group by or filter parameters that you have specified.",
+      "description": "Retrieves a statistics for a specific notification from Dragos SiteStore based on the group by or filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Group By",
@@ -519,7 +553,7 @@
       "category": "investigation",
       "annotation": "get_vulnerabilities",
       "enabled": true,
-      "description": "Retrieves all details associated with an vulnerabilities from Dragos Sitestore based on the filter parameters that you have specified.",
+      "description": "Retrieves all details associated with an vulnerabilities from Dragos SiteStore based on the filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Sort By",
@@ -543,7 +577,7 @@
           "tooltip": "Select a checkbox to order the retrieved vulnerabilities. If selected, they will be retrieved in descending order."
         },
         {
-          "title": "PageSize",
+          "title": "Page Size",
           "description": "Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
@@ -553,7 +587,7 @@
           "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
-          "title": "pageNumber",
+          "title": "Page Number",
           "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
@@ -574,13 +608,13 @@
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter vulnerabilities in Dragos Sitestore.",
+          "description": "Specify additional parameters with which to filter vulnerabilities in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter vulnerabilities in Dragos Sitestore.",
+          "tooltip": "Specify additional parameters with which to filter vulnerabilities in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -657,7 +691,7 @@
       "category": "investigation",
       "annotation": "get_vulnerability_detections",
       "enabled": true,
-      "description": "Retrieves all detections details associated with an vulnerability from Dragos Sitestore based on the filter parameters that you have specified.",
+      "description": "Retrieves all detections details associated with an vulnerability from Dragos SiteStore based on the filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Sort By",
@@ -681,7 +715,7 @@
           "tooltip": "Select a checkbox to order the retrieved vulnerability detections. If selected, they will be retrieved in descending order."
         },
         {
-          "title": "PageSize",
+          "title": "Page Size",
           "description": "Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
@@ -691,7 +725,7 @@
           "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
-          "title": "pageNumber",
+          "title": "Page Number",
           "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
@@ -712,13 +746,13 @@
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter vulnerability detections in Dragos Sitestore.",
+          "description": "Specify additional parameters with which to filter vulnerability detections in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter vulnerability detections in Dragos Sitestore.",
+          "tooltip": "Specify additional parameters with which to filter vulnerability detections in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -905,7 +939,7 @@
       "category": "investigation",
       "annotation": "get_detections",
       "enabled": true,
-      "description": "Retrieves all detections from Dragos Sitestore based on the filter parameters that you have specified.",
+      "description": "Retrieves all detections from Dragos SiteStore based on the filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Include Fields",
@@ -949,7 +983,7 @@
           "tooltip": "Select a checkbox to order the retrieved detections. If selected, they will be retrieved in descending order."
         },
         {
-          "title": "PageSize",
+          "title": "Page Size",
           "description": "Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
@@ -959,7 +993,7 @@
           "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
-          "title": "pageNumber",
+          "title": "Page Number",
           "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
@@ -980,13 +1014,13 @@
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter detections in Dragos Sitestore.",
+          "description": "Specify additional parameters with which to filter detections in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter detections in Dragos Sitestore.",
+          "tooltip": "Specify additional parameters with which to filter detections in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -1117,7 +1151,7 @@
       "operation": "execute_an_api_call",
       "title": "Execute an API Request",
       "annotation": "execute_an_api_call",
-      "description": "Sends an API request to any Dragos Sitestore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
+      "description": "Sends an API request to any Dragos SiteStore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
       "category": "investigation",
       "visible": true,
       "enabled": true,
