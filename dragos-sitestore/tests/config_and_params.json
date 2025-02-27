@@ -1,0 +1,130 @@
+{
+  "config": [
+    {
+      "server_url": "https://cx-integrations.cxc.dragos.cloud",
+      "api_id": "",
+      "api_secret": "",
+      "verify_ssl": false
+    }
+  ],
+  "get_assets": [
+    {
+      "createdAtAfter": "2025-02-13T06:22:25.881Z",
+      "createdAtBefore": "2025-02-13T06:22:25.882Z",
+      "lastSeenAtAfter": "2025-02-13T06:22:25.882Z",
+      "lastSeenAtBefore": "2025-02-13T06:22:25.882Z",
+      "is_deleted": null,
+      "overlaps_starttime": "2025-02-13T06:22:25.882Z",
+      "overlaps_endtime": "2025-02-13T06:22:25.882Z",
+      "maskAddress_starttime": "2025-02-13T06:22:25.883Z",
+      "maskAddress_endtime": "2025-02-13T06:22:25.883Z",
+      "sort_by": [
+        "ID",
+        "Created At"
+      ],
+      "order_by": true,
+      "pageSize": 1,
+      "pageNumber": null,
+      "limitTotalCount": null,
+      "additional_fields": null
+    }
+  ],
+  "get_notifications": [
+    {
+      "filter": null,
+      "sorts": null,
+      "sortField": "ID",
+      "sortDescending": false,
+      "resolveChildrenDepth": null,
+      "pageSize": 1,
+      "pageNumber": null,
+      "limitTotalCount": null,
+      "additional_fields": null
+    }
+  ],
+  "get_notification_details": [
+    {
+      "ids": "6",
+      "resolveChildrenDepth": null,
+      "includeConversations": true
+    }
+  ],
+  "get_stats_of_notification": [
+    {
+      "groupBy": [
+        "Type",
+        "Source"
+      ],
+      "filter": null
+    }
+  ],
+  "get_vulnerabilities": [
+    {
+      "sort_by": null,
+      "order_by": true,
+      "pageSize": 1,
+      "pageNumber": null,
+      "limitTotalCount": null,
+      "additional_fields": {
+        "selector": {
+          "idIn": "",
+          "valueMatches": "",
+          "anyOf": "",
+          "allOf": "",
+          "noneOf": ""
+        }
+      }
+    }
+  ],
+  "get_vulnerability_detections": [
+    {
+      "sort_by": null,
+      "order_by": true,
+      "pageSize": 1,
+      "pageNumber": null,
+      "limitTotalCount": null,
+      "additional_fields": {
+        "selector": {
+          "idIn": "",
+          "valueMatches": "",
+          "anyOf": "",
+          "allOf": "",
+          "noneOf": ""
+        }
+      }
+    }
+  ],
+  "get_detections": [
+    {
+      "includeFields": null,
+      "excludeFields": null,
+      "sort_by": null,
+      "order_by": true,
+      "pageSize": 1,
+      "pageNumber": null,
+      "limitTotalCount": null,
+      "additional_fields": {
+        "selector": {
+          "idIn": "",
+          "valueMatches": "",
+          "anyOf": "",
+          "allOf": "",
+          "noneOf": ""
+        }
+      }
+    }
+  ],
+  "execute_an_api_call": [
+    {
+      "method": "GET",
+      "endpoint": "notifications/api/v2/notification/stats",
+      "query_params": {
+        "groupBy": [
+          "type",
+          "source"
+        ]
+      },
+      "payload": null
+    }
+  ]
+}
