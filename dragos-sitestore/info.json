@@ -117,43 +117,43 @@
         },
         {
           "title": "Overlaps Address Start DateTime",
-          "description": "Select the date and time to filter the results, including only items that last seen  after the specified timestamp.",
+          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
           "type": "datetime",
           "name": "overlaps_starttime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen after the specified timestamp."
+          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
         },
         {
           "title": "Overlaps Address End DateTime",
-          "description": "Select the date and time to filter the results, including only items that last seen before the specified timestamp.",
+          "description": "Select the date and time to filter the results, including only items that created before the specified timestamp.",
           "type": "datetime",
           "name": "overlaps_endtime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen before the specified timestamp."
+          "tooltip": "Select the date and time to filter the results, including only items that created before the specified timestamp."
         },
         {
           "title": "Mask Address Start DateTime",
-          "description": "Select the date and time to filter the results, including only items that last seen  after the specified timestamp.",
+          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
           "type": "datetime",
           "name": "maskAddress_starttime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen after the specified timestamp."
+          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
         },
         {
           "title": "Mask Address End DateTime",
-          "description": "Select the date and time to filter the results, including only items that last seen before the specified timestamp.",
+          "description": "Select the date and time to filter the results, including only items that created before the specified timestamp.",
           "type": "datetime",
           "name": "maskAddress_endtime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen before the specified timestamp."
+          "tooltip": "Select the date and time to filter the results, including only items that created before the specified timestamp."
         },
         {
           "title": "Sort By",
