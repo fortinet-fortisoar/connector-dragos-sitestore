@@ -245,7 +245,7 @@ def get_vulnerabilities(config, params):
             if value:
                 if field == 'sort_by':
                     # Build 'sorts' list based on 'sort_by' and 'order_by'
-                    pagination['sorts'] = [{"field": field, "descending": params.get('order_by', False)} for field in
+                    pagination['sorts'] = [{"field": field.strip(), "descending": params.get('order_by', False)} for field in
                                            (value if isinstance(value, list) else value.split(","))]
 
                 else:
@@ -278,7 +278,7 @@ def get_vulnerability_detections(config, params):
             if value:
                 if field == 'sort_by':
                     # Build 'sorts' list based on 'sort_by' and 'order_by'
-                    pagination['sorts'] = [{"field": field, "descending": params.get('order_by', False)} for field in
+                    pagination['sorts'] = [{"field": field.strip(), "descending": params.get('order_by', False)} for field in
                                            (value if isinstance(value, list) else value.split(","))]
                 else:
                     pagination[field] = value
@@ -311,7 +311,7 @@ def get_detections(config, params):
             if value:
                 if field == 'sort_by':
                     # Build 'sorts' list based on 'sort_by' and 'order_by'
-                    pagination['sorts'] = [{"field": field, "descending": params.get('order_by', False)} for field in
+                    pagination['sorts'] = [{"field": field.strip(), "descending": params.get('order_by', False)} for field in
                                            (value if isinstance(value, list) else value.split(","))]
                 else:
                     pagination[field] = value
@@ -346,8 +346,8 @@ def execute_an_api_call(config, params):
         dg = Dragos(config)
         endpoint = params.get("endpoint")
         http_method = params.get("method")
-        query_params = params.get("query_params") if params.get("query_params") else None
-        payload = json.dumps(params.get("payload")) if params.get("payload") else None
+        query_params = params.get("query_params") if params.get("query_params") else {}
+        payload = params.get("payload") if params.get("payload") else {}
         logger.debug("Payload: {0}".format(payload))
         response = dg.make_rest_call(endpoint, method=http_method, params=query_params, data=json.dumps(payload))
         return response
