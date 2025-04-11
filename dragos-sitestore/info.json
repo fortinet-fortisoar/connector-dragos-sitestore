@@ -7,7 +7,7 @@
   "cs_approved": true,
   "cs_compatible": true,
   "contributor": "",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/dragos-sitestore/1053/dragos-sitestore-v1-0-0",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
   "category": "Asset Management",
@@ -25,34 +25,34 @@
       },
       {
         "title": "API ID",
-        "description": "Specify the API ID to access the endpoint to connect and perform the automated operations",
+        "description": "Specify the API ID to connect to the endpoint and perform automated operations",
         "required": true,
         "editable": true,
         "visible": true,
         "type": "password",
         "name": "api_id",
-        "tooltip": "Specify the API ID to access the endpoint to connect and perform the automated operations"
+        "tooltip": "Specify the API ID to connect to the endpoint and perform automated operations"
       },
       {
         "title": "API Secret",
-        "description": "Specify the API Secret to access the endpoint to connect and perform the automated operations",
+        "description": "Specify the API Secret to connect to the endpoint and perform automated operations",
         "required": true,
         "editable": true,
         "visible": true,
         "type": "password",
         "name": "api_secret",
-        "tooltip": "Specify the API Secret to access the endpoint to connect and perform the automated operations"
+        "tooltip": "Specify the API Secret to connect to the endpoint and perform automated operations"
       },
       {
         "title": "Verify SSL",
-        "description": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set to True.",
+        "description": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is selected, i.e., set to true.",
         "name": "verify_ssl",
         "type": "checkbox",
         "required": false,
         "editable": true,
         "visible": true,
         "value": true,
-        "tooltip": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set to True."
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is selected, i.e., set to true."
       }
     ]
   },
@@ -63,107 +63,107 @@
       "category": "investigation",
       "annotation": "get_assets",
       "enabled": true,
-      "description": "Retrieves all details associated with an assets from Dragos SiteStore based on the filter parameters that you have specified.",
+      "description": "Retrieves all assets from Dragos SiteStore based on created time, last seen time, and other filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Created After",
-          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
+          "description": "(Optional) Select a date and time to retrieve results that include only those items that were created after the specified timestamp.",
           "type": "datetime",
           "name": "createdAtAfter",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
+          "tooltip": "(Optional) Select a date and time to retrieve results that include only those items that were created after the specified timestamp."
         },
         {
           "title": "Created Before",
-          "description": "Select the date and time to filter the results, including only items that created before the specified timestamp.",
+          "description": "(Optional) Select a date and time to retrieve results that include only those items that were created before the specified timestamp.",
           "type": "datetime",
           "name": "createdAtBefore",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created before the specified timestamp."
+          "tooltip": "(Optional) Select a date and time to retrieve results that include only those items that were created before the specified timestamp."
         },
         {
           "title": "LastSeen After",
-          "description": "Select the date and time to filter the results, including only items that last seen  after the specified timestamp.",
+          "description": "(Optional) Select a date and time to retrieve results that include only those items that were last seen after the specified timestamp.",
           "type": "datetime",
           "name": "lastSeenAtAfter",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen after the specified timestamp."
+          "tooltip": "(Optional) Select a date and time to retrieve results that include only those items that were last seen after the specified timestamp."
         },
         {
           "title": "LastSeen Before",
-          "description": "Select the date and time to filter the results, including only items that last seen before the specified timestamp.",
+          "description": "(Optional) Select a date and time to retrieve results that include only those items that were last seen before the specified timestamp.",
           "type": "datetime",
           "name": "lastSeenAtBefore",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that last seen before the specified timestamp."
+          "tooltip": "(Optional) Select a date and time to retrieve results that include only those items that were last seen before the specified timestamp."
         },
         {
           "title": "Include Deleted Assets",
-          "description": "Select the option to include deleted assets in the results from Dragos SiteStore.",
+          "description": "(Optional) Select to include deleted assets in the results retrieved from Dragos SiteStore.",
           "type": "checkbox",
           "name": "is_deleted",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the option to include deleted assets in the results from Dragos SiteStore."
+          "tooltip": "(Optional) Select to include deleted assets in the results retrieved from Dragos SiteStore."
         },
         {
           "title": "Overlaps Address Start DateTime",
-          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
+          "description": "(Optional) Select the start date and time of the timeframe to retrieve only those assets that were active or relevant during the specified time frame.",
           "type": "datetime",
           "name": "overlaps_starttime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
+          "tooltip": "(Optional) Select the start date and time of the timeframe to retrieve only those assets that were active or relevant during the specified time frame."
         },
         {
           "title": "Overlaps Address End DateTime",
-          "description": "Select the date and time to filter the results, including only items that created before the specified timestamp.",
+          "description": "(Optional) Select the end date and time of the timeframe to retrieve only those assets that were active or relevant during the specified time frame.",
           "type": "datetime",
           "name": "overlaps_endtime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created before the specified timestamp."
+          "tooltip": "(Optional) Select the end date and time of the timeframe to retrieve only those assets that were active or relevant during the specified time frame."
         },
         {
           "title": "Mask Address Start DateTime",
-          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
+          "description": "(Optional) Select the start date and time of the timeframe to retrieve masked assets that were active or relevant during the specified time frame.",
           "type": "datetime",
           "name": "maskAddress_starttime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
+          "tooltip": "(Optional) Select the start date and time of the timeframe to retrieve masked assets that were active or relevant during the specified time frame."
         },
         {
           "title": "Mask Address End DateTime",
-          "description": "Select the date and time to filter the results, including only items that created before the specified timestamp.",
+          "description": "(Optional) Select the end date and time of the timeframe to retrieve masked assets that were active or relevant during the specified time frame.",
           "type": "datetime",
           "name": "maskAddress_endtime",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created before the specified timestamp."
+          "tooltip": "(Optional) Select the end date and time of the timeframe to retrieve masked assets that were active or relevant during the specified time frame."
         },
         {
           "title": "Sort By",
-          "description": "Select an multiple options in which to sort the assets retrieved. You can choose from the following options: ID, Created At, LastSeen At, First Address ID, First Address Type, First Address Network ID, First Address Value, or Attribute.",
+          "description": "(Optional) Select the fields by which to sort the assets retrieved. You can choose one or more from the following options: ID, Created At, LastSeen At, First Address ID, First Address Type, First Address Network ID, First Address Value, or Attribute.",
           "type": "multiselect",
           "name": "sort_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select an multiple options in which to sort the assets retrieved. You can choose from the following options: ID, Created At, LastSeen At, First Address ID, First Address Type, First Address Network ID, First Address Value, or Attribute.",
+          "tooltip": "(Optional) Select the fields by which to sort the assets retrieved. You can choose one or more from the following options: ID, Created At, LastSeen At, First Address ID, First Address Type, First Address Network ID, First Address Value, or Attribute.",
           "options": [
             "ID",
             "Created At",
@@ -177,7 +177,7 @@
         },
         {
           "title": "Order By",
-          "description": "Select a checkbox to order the retrieved assets. If selected, they will be retrieved in descending order.",
+          "description": "(Optional) Select to retrieve the assets in descending order. Clear the checkbox, i.e., leave unchecked to retrieve results in ascending order.",
           "type": "checkbox",
           "name": "order_by",
           "required": false,
@@ -187,43 +187,51 @@
         },
         {
           "title": "Page Size",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response.",
+          "description": "(Optional) Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
+          "tooltip": "(Optional) Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
           "title": "Page Number",
-          "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
+          "description": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
+          "tooltip": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
         },
         {
           "title": "Limit Total Count",
-          "description": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
+          "description": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
           "type": "integer",
           "name": "limitTotalCount",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
+          "tooltip": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter assets in Dragos SiteStore.",
+          "description": "(Optional) Specify additional parameters with which to filter assets in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter assets in Dragos SiteStore."
+          "tooltip": "(Optional) Specify additional parameters with which to filter assets in Dragos SiteStore.",
+          "value": {
+            "selector": {
+              "idOrOldIdIn": "",
+              "anyOf": "",
+              "allOf": "",
+              "isDeleted": ""
+            }
+          }
         }
       ],
       "output_schema": {
@@ -416,38 +424,38 @@
       "category": "investigation",
       "annotation": "get_notifications",
       "enabled": true,
-      "description": "Retrieves all details associated with an notifications from Dragos SiteStore based on the filter parameters that you have specified.",
+      "description": "Retrieves all notifications from Dragos SiteStore based on the filter query, created time, and other filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Filter",
-          "description": "Specify a filter string in FIQL format based on which you want to retrieve notifications. For ex, syntax: fieldname operator value",
+          "description": "(Optional) Specify a filter string in Feed Item Query Language (FIQL) format to retrieve notifications. Syntax: fieldname operator value",
           "type": "text",
           "name": "filter",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a filter string in FIQL format based on which you want to retrieve notifications. For ex, syntax: fieldname operator value",
+          "tooltip": "(Optional) Specify a filter string in Feed Item Query Language (FIQL) format to retrieve notifications. Syntax: fieldname operator value",
           "placeholder": "For ex: severity == 1"
         },
         {
           "title": "Created After",
-          "description": "Select the date and time to filter the results, including only items that created after the specified timestamp.",
+          "description": "(Optional) Select the date and time to retrieve results containing items created after the specified timestamp.",
           "type": "datetime",
           "name": "createdAtAfter",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select the date and time to filter the results, including only items that created after the specified timestamp."
+          "tooltip": "(Optional) Select the date and time to retrieve results containing items created after the specified timestamp."
         },
         {
           "title": "State",
-          "description": "Specify the state based on which you want to retrieve notifications from Dragos SiteStore. Possible values are RESOLVED or UNRESOLVED",
+          "description": "(Optional) Specify the state based on which to retrieve notifications from Dragos SiteStore. You can choose from the following options: RESOLVED or UNRESOLVED",
           "type": "select",
           "name": "state",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the state based on which you want to retrieve notifications from Dragos SiteStore. Possible values are RESOLVED or UNRESOLVED",
+          "tooltip": "(Optional) Specify the state based on which to retrieve notifications from Dragos SiteStore. You can choose from the following options: RESOLVED or UNRESOLVED",
           "options": [
             "RESOLVED",
             "UNRESOLVED"
@@ -455,24 +463,24 @@
         },
         {
           "title": "Sorts",
-          "description": "Specify the comma-separated sets of a sort field, colon, and 'a' (for ascending) or 'd' (for descending). Possible values are  id, source, type, createdAt, occurredAt, severity, reviewed, retained, detectorId, firstSourceIp, firstDestinationIp, firstOtherIp, lastSeenAt.",
+          "description": "(Optional) Specify comma-separated field names, colon, and a (for ascending) or d (for descending). You can any of these field names: id, source, type, createdAt, occurredAt, severity, reviewed, retained, detectorId, firstSourceIp, firstDestinationIp, firstOtherIp, lastSeenAt. For example: source:a, retained:d",
           "type": "text",
           "name": "sorts",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the comma-separated sets of a sort field, colon, and 'a' (for ascending) or 'd' (for descending). Possible values are  id, source, type, createdAt, occurredAt, severity, reviewed, retained, detectorId, firstSourceIp, firstDestinationIp, firstOtherIp, lastSeenAt.",
+          "tooltip": "(Optional) Specify comma-separated field names, colon, and a (for ascending) or d (for descending). You can any of these field names: id, source, type, createdAt, occurredAt, severity, reviewed, retained, detectorId, firstSourceIp, firstDestinationIp, firstOtherIp, lastSeenAt. For example: source:a, retained:d",
           "placeholder": "For ex: source:a, createdAt:d, etc."
         },
         {
           "title": "Sort By",
-          "description": "Select an option in which to sort the notifications retrieved. You can choose from the following options: ID, Source, Type, Created At, Occurred At, Severity, Reviewed, etc.",
+          "description": "(Optional) Select the fields by which to sort the assets retrieved. You can choose one or more from the following options: ID, Source, Type, Created At, Occurred At, Severity, Reviewed, etc.",
           "type": "select",
           "name": "sortField",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select an option in which to sort the notifications retrieved. You can choose from the following options: ID, Source, Type, Created At, Occurred At, Severity, Reviewed, etc.",
+          "tooltip": "(Optional) Select the fields by which to sort the assets retrieved. You can choose one or more from the following options: ID, Source, Type, Created At, Occurred At, Severity, Reviewed, etc.",
           "options": [
             "ID",
             "Source",
@@ -500,48 +508,48 @@
         },
         {
           "title": "Order By",
-          "description": "Select a checkbox to order the retrieved notifications. If selected, they will be retrieved in descending order. By default, this option is set to False.",
+          "description": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order.",
           "type": "checkbox",
           "name": "sortDescending",
           "required": false,
           "visible": true,
           "editable": true,
           "value": false,
-          "tooltip": "Select a checkbox to order the retrieved notifications. If selected, they will be retrieved in descending order. By default, this option is set to False. Note: This parameter is used in combination with the \"Sort By\" parameter."
+          "tooltip": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
         },
         {
           "title": "Resolve Children Depth",
-          "description": "Specify the number of steps deep to recursively resolve child notifications",
+          "description": "(Optional) Specify the number of steps deep to recursively resolve child notifications",
           "type": "integer",
           "name": "resolveChildrenDepth",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the number of steps deep to recursively resolve child notifications"
+          "tooltip": "(Optional) Specify the number of steps deep to recursively resolve child notifications"
         },
         {
           "title": "Offset",
-          "description": "Specify the number of records to skip when retrieving records from Dragos SiteStore server.",
+          "description": "(Optional) Specify the number of records to skip when retrieving records from Dragos SiteStore server.",
           "type": "integer",
           "name": "offset",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the number of records to skip when retrieving records from Dragos SiteStore server."
+          "tooltip": "(Optional) Specify the number of records to skip when retrieving records from Dragos SiteStore server."
         },
         {
           "title": "Page Size",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response. Note: By default, it will be fetch 10 records and maximum 1000 records.",
+          "description": "(Optional) Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response. By default, it will be fetch 10 records and maximum 1000 records."
+          "tooltip": "(Optional) Specify the maximum number of results this operation should return, per page, in the response. By default, it will be fetch 10 records and maximum 1000 records."
         },
         {
           "title": "Page Number",
-          "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
+          "description": "(Optional) Specify the page number from which to retrieve results when\npagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
           "required": false,
@@ -551,23 +559,23 @@
         },
         {
           "title": "Limit Total Count",
-          "description": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
+          "description": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
           "type": "integer",
           "name": "limitTotalCount",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
+          "tooltip": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter notifications in Dragos SiteStore.",
+          "description": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter notifications in Dragos SiteStore."
+          "tooltip": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore."
         }
       ],
       "output_schema": {
@@ -610,41 +618,206 @@
       "category": "investigation",
       "annotation": "get_notification_details",
       "enabled": true,
-      "description": "Retrieves a details for one or more notifications from Dragos SiteStore based on the notification ID's and other input parameters that you have specified.",
+      "description": "Retrieves details for one or more notifications from Dragos SiteStore based on the notification ID, notification depth, and other filter parameters that you have specified.",
       "parameters": [
         {
           "title": "Notification IDs",
-          "description": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos SiteStore.",
+          "description": "Specify the comma-separated notification IDs to retrieve their details from Dragos SiteStore.",
           "type": "text",
           "name": "ids",
           "required": true,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the comma-separated sets of a notification ID's you want to retrieve details from Dragos SiteStore."
+          "tooltip": "Specify the comma-separated notification IDs to retrieve their details from Dragos SiteStore."
         },
         {
           "title": "Resolve Children Depth",
-          "description": "Specify the number of steps deep to recursively resolve child notifications",
+          "description": "(Optional) Specify the number of steps deep to recursively resolve child notifications",
           "type": "integer",
           "name": "resolveChildrenDepth",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the number of steps deep to recursively resolve child notifications"
+          "tooltip": "(Optional) Specify the number of steps deep to recursively resolve child notifications"
         },
         {
           "title": "Include Conversations",
-          "description": "If you selected, conversations should be included with the notification. By default, this option is set to True.",
+          "description": "(Optional) Select to include conversations along with the notifications. By default, this option is selected, i.e., set to True.",
           "type": "checkbox",
           "name": "includeConversations",
           "required": false,
           "visible": true,
           "editable": true,
           "value": true,
-          "tooltip": "If you selected, conversations should be included with the notification. By default, this option is set to True."
+          "tooltip": "(Optional) Select to include conversations along with the notifications. By default, this option is selected, i.e., set to True."
         }
       ],
-      "output_schema": []
+      "output_schema": [
+        {
+          "id": "",
+          "type": "",
+          "count": "",
+          "state": "",
+          "assets": [
+            {
+              "id": "",
+              "enriched": "",
+              "addresses": [
+                {
+                  "id": "",
+                  "type": "",
+                  "value": "",
+                  "createdAt": "",
+                  "networkId": ""
+                }
+              ],
+              "createdAt": "",
+              "attributes": {
+                "tags": [],
+                "zoneId": "",
+                "host.id": "",
+                "host.ip": [
+                ],
+                "host.mac": [
+                ],
+                "labels.x": "",
+                "labels.y": "",
+                "host.name": "",
+                "host.type": "",
+                "host.class": "",
+                "host.is_ot": "",
+                "host.domain": [
+                ],
+                "host.vendor": "",
+                "labels.Zone": "",
+                "host.os.name": "",
+                "host.zone.id": "",
+                "host.zone_id": "",
+                "host.hostname": [
+                ],
+                "observed.tags": [
+                ],
+                "override.tags": [
+                ],
+                "host.last_seen": "",
+                "host.os.family": "",
+                "host.os.kernel": "",
+                "host.zone.name": "",
+                "labels.Country": "",
+                "host.address_id": [
+                ],
+                "host.os.version": "",
+                "observed.zoneId": "",
+                "related.network": [
+                ],
+                "labels.Monitored": "",
+                "labels.zone_name": "",
+                "related.observer": [
+                ],
+                "labels.ObservedBy": [
+                ],
+                "override.labels.x": "",
+                "override.labels.y": "",
+                "labels.Criticality": "",
+                "observed.host.name": "",
+                "observed.host.type": "",
+                "override.host.type": "",
+                "host.hardware.model": "",
+                "labels.Monitored-OT": "",
+                "labels.System Owner": "",
+                "observed.host.class": "",
+                "observed.host.is_ot": "",
+                "host.hardware.family": "",
+                "host.hardware.serial": "",
+                "host.hardware.series": "",
+                "host.hardware.vendor": "",
+                "labels.Monitored-MAC": "",
+                "observed.host.vendor": "",
+                "override.labels.Zone": "",
+                "labels.CrowdStrike ID": "",
+                "observed.host.os.name": "",
+                "observed.host.zone.id": "",
+                "observed.host.zone_id": "",
+                "labels.Monitored-OTPeer": "",
+                "observed.host.last_seen": "",
+                "observed.host.os.family": "",
+                "observed.host.os.kernel": "",
+                "override.labels.Country": "",
+                "labels.Monitored-MACPeer": "",
+                "labels.hardware.fidelity": "",
+                "observed.host.os.version": "",
+                "observed.labels.Monitored": "",
+                "observed.labels.zone_name": "",
+                "observed.labels.ObservedBy": [
+                ],
+                "override.labels.Criticality": "",
+                "labels.CrowdStrike Last Seen": "",
+                "observed.host.hardware.model": "",
+                "observed.labels.Monitored-OT": "",
+                "override.host.hardware.model": "",
+                "override.labels.System Owner": "",
+                "observed.host.hardware.serial": "",
+                "observed.host.hardware.vendor": "",
+                "observed.labels.Monitored-MAC": "",
+                "override.host.hardware.family": "",
+                "override.host.hardware.serial": "",
+                "override.host.hardware.series": "",
+                "host.hardware.firmware.version": "",
+                "override.labels.CrowdStrike ID": "",
+                "observed.labels.Monitored-OTPeer": "",
+                "labels.AttributesLastObservedDate": "",
+                "observed.labels.Monitored-MACPeer": "",
+                "observed.labels.hardware.fidelity": "",
+                "override.labels.hardware.fidelity": "",
+                "override.labels.CrowdStrike Last Seen": "",
+                "override.host.hardware.firmware.version": "",
+                "observed.labels.AttributesLastObservedDate": ""
+              },
+              "directionalities": [
+              ]
+            }
+          ],
+          "source": "",
+          "content": "",
+          "summary": "",
+          "retained": "",
+          "reviewed": "",
+          "severity": "",
+          "createdAt": "",
+          "sourceIds": [
+          ],
+          "collectors": [
+            {
+              "sensorId": "",
+              "customerId": "",
+              "collectorId": ""
+            }
+          ],
+          "detectorId": "",
+          "lastSeenAt": "",
+          "occurredAt": "",
+          "threatInfo": [
+            {
+              "tactic": {
+                "id": "",
+                "name": "",
+                "reference": ""
+              },
+              "framework": ""
+            }
+          ],
+          "firstSeenAt": "",
+          "sourceIndex": "",
+          "intelReports": [
+          ],
+          "sourceIdField": "",
+          "detectionQuads": [
+          ],
+          "matchedRuleIds": [],
+          "analyticEventId": "",
+          "analyticEventIndex": ""
+        }
+      ]
     },
     {
       "title": "Get Statistics of Notification",
@@ -652,7 +825,7 @@
       "category": "investigation",
       "annotation": "get_stats_of_notification",
       "enabled": true,
-      "description": "Retrieves a statistics for a specific notification from Dragos SiteStore based on the group by or filter parameters that you have specified.",
+      "description": "Retrieves a specific notification statistics from Dragos SiteStore based on the group by and the filter query that you have specified.",
       "parameters": [
         {
           "title": "Group By",
@@ -687,13 +860,13 @@
         },
         {
           "title": "Filter",
-          "description": "Specify a filter string in FIQL format based on which you want to retrieve notifications. For ex, syntax: fieldname operator value",
+          "description": "(Optional) Specify a filter string in Feed Item Query Language (FIQL) format to retrieve notification statistics. Syntax: fieldname operator value",
           "type": "text",
           "name": "filter",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a filter string in FIQL format based on which you want to retrieve notifications. For ex, syntax: fieldname operator value",
+          "tooltip": "(Optional) Specify a filter string in Feed Item Query Language (FIQL) format to retrieve notification statistics. Syntax: fieldname operator value",
           "placeholder": "For ex: severity == 5"
         }
       ],
@@ -723,68 +896,68 @@
       "category": "investigation",
       "annotation": "get_vulnerabilities",
       "enabled": true,
-      "description": "Retrieves all details associated with an vulnerabilities from Dragos SiteStore based on the filter parameters that you have specified.",
+      "description": "Retrieves vulnerabilities from Dragos SiteStore based on the sorting criteria, sort direction, and other pagination parameters that you have specified.",
       "parameters": [
         {
           "title": "Sort By",
-          "description": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "description": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "type": "text",
           "name": "sort_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "tooltip": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "placeholder": "For ex: vulnerability.id, vulnerability.title, etc."
         },
         {
           "title": "Order By",
-          "description": "Select a checkbox to order the retrieved vulnerabilities. If selected, they will be retrieved in descending order.",
+          "description": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order.",
           "type": "checkbox",
           "name": "order_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select a checkbox to order the retrieved vulnerabilities. If selected, they will be retrieved in descending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
+          "tooltip": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
         },
         {
           "title": "Page Size",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response.",
+          "description": "(Optional) Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
+          "tooltip": "(Optional) Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
           "title": "Page Number",
-          "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
+          "description": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
+          "tooltip": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
         },
         {
           "title": "Limit Total Count",
-          "description": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
+          "description": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
           "type": "integer",
           "name": "limitTotalCount",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
+          "tooltip": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter vulnerabilities in Dragos SiteStore.",
+          "description": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter vulnerabilities in Dragos SiteStore.",
+          "tooltip": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -861,68 +1034,68 @@
       "category": "investigation",
       "annotation": "get_vulnerability_detections",
       "enabled": true,
-      "description": "Retrieves all detections details associated with an vulnerability from Dragos SiteStore based on the filter parameters that you have specified.",
+      "description": "Retrieves detections details associated with a vulnerability from Dragos SiteStore based on the sorting criteria, sort direction, and other pagination parameters that you have specified.",
       "parameters": [
         {
           "title": "Sort By",
-          "description": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "description": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "type": "text",
           "name": "sort_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "tooltip": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "placeholder": "For ex: event.id, etc."
         },
         {
           "title": "Order By",
-          "description": "Select a checkbox to order the retrieved vulnerability detections. If selected, they will be retrieved in descending order.",
+          "description": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order.",
           "type": "checkbox",
           "name": "order_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select a checkbox to order the retrieved vulnerability detections. If selected, they will be retrieved in descending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
+          "tooltip": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
         },
         {
           "title": "Page Size",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response.",
+          "description": "(Optional) Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
+          "tooltip": "(Optional) Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
           "title": "Page Number",
-          "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
+          "description": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
+          "tooltip": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
         },
         {
           "title": "Limit Total Count",
-          "description": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
+          "description": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
           "type": "integer",
           "name": "limitTotalCount",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
+          "tooltip": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter vulnerability detections in Dragos SiteStore.",
+          "description": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter vulnerability detections in Dragos SiteStore.",
+          "tooltip": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -1109,88 +1282,88 @@
       "category": "investigation",
       "annotation": "get_detections",
       "enabled": true,
-      "description": "Retrieves all detections from Dragos SiteStore based on the filter parameters that you have specified.",
+      "description": "Retrieves all detections from Dragos SiteStore based on the excluded or included fields, sorting criteria and direction, and other pagination parameters that you have specified.",
       "parameters": [
         {
           "title": "Include Fields",
-          "description": "Specify a comma-separated list of fields to include, and only those fields, along with other required fields, will be returned in the response.",
+          "description": "(Optional) Specify a comma-separated list of fields to include along with other required fields in the response.",
           "type": "text",
           "name": "includeFields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a comma-separated list of fields to include, and only those fields, along with other required fields, will be returned in the response."
+          "tooltip": "(Optional) Specify a comma-separated list of fields to include along with other required fields in the response."
         },
         {
           "title": "Exclude Fields",
-          "description": "Specify a comma-separated list of fields to exclude from the detections returned, unless the field is required, in the response.",
+          "description": "(Optional) Specify a comma-separated list of fields to exclude from the detections returned. NOTE: Required fields are always returned, even when excluded.",
           "type": "text",
           "name": "excludeFields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a comma-separated list of fields to exclude from the detections returned, unless the field is required, in the response."
+          "tooltip": "(Optional) Specify a comma-separated list of fields to exclude from the detections returned. NOTE: Required fields are always returned, even when excluded."
         },
         {
           "title": "Sort By",
-          "description": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "description": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "type": "text",
           "name": "sort_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify a comma-separated list of fields based on which you want to filter the response.",
+          "tooltip": "(Optional) Specify fields, as comma-separated values, by which to filter the response.",
           "placeholder": "For ex: id, name, etc."
         },
         {
           "title": "Order By",
-          "description": "Select a checkbox to order the retrieved detections. If selected, they will be retrieved in descending order.",
+          "description": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order.",
           "type": "checkbox",
           "name": "order_by",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Select a checkbox to order the retrieved detections. If selected, they will be retrieved in descending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
+          "tooltip": "(Optional) Select to retrieve the records in descending order. Clear the checkbox, i.e., leave unchecked, to retrieve the records in ascending order. Note: This parameter is used in combination with the \"Sort By\" parameter."
         },
         {
           "title": "Page Size",
-          "description": "Specify the maximum number of results this operation should return, per page, in the response.",
+          "description": "(Optional) Specify the maximum number of results this operation should return, per page, in the response.",
           "type": "integer",
           "name": "pageSize",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify the maximum number of results this operation should return, per page, in the response."
+          "tooltip": "(Optional) Specify the maximum number of results this operation should return, per page, in the response."
         },
         {
           "title": "Page Number",
-          "description": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
+          "description": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks.",
           "type": "integer",
           "name": "pageNumber",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the page of results to retrieve when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
+          "tooltip": "(Optional) Specify the page number from which to retrieve results when pagination is applied. This parameter is used to fetch a specific subset of results based on the page number, helping to break large datasets into manageable chunks."
         },
         {
           "title": "Limit Total Count",
-          "description": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
+          "description": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response.",
           "type": "integer",
           "name": "limitTotalCount",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
+          "tooltip": "(Optional) Specifies the maximum number of results to be returned in the response. This parameter helps control the volume of data by limiting the total count of items in the response."
         },
         {
           "title": "Additional Parameters",
-          "description": "Specify additional parameters with which to filter detections in Dragos SiteStore.",
+          "description": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "type": "json",
           "name": "additional_fields",
           "required": false,
           "visible": true,
           "editable": true,
-          "tooltip": "Specify additional parameters with which to filter detections in Dragos SiteStore.",
+          "tooltip": "(Optional) Specify additional parameters with which to filter records in Dragos SiteStore.",
           "value": {
             "selector": {
               "idIn": "",
@@ -1321,7 +1494,7 @@
       "operation": "execute_an_api_call",
       "title": "Execute an API Request",
       "annotation": "execute_an_api_call",
-      "description": "Sends an API request to any Dragos SiteStore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
+      "description": "Sends an API request to an API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs.",
       "category": "investigation",
       "visible": true,
       "enabled": true,
@@ -1346,7 +1519,7 @@
           "title": "Endpoint",
           "name": "endpoint",
           "tooltip": "Specify the target API URL path for example: assets/api/v4/getAssets",
-          "description": "Specify the target API URL path for the request. For example, if the website is https://example.com and URL path is https://example.com/assets/api/v4/getAssets, the endpoint would be assets/api/v4/getAssets. ",
+          "description": "Specify the target API URL path for the request. For example, if the website is https://example.com and URL path is https://example.com/images/pic.jpg, the endpoint would be images/pic.jpg.",
           "type": "text",
           "visible": true,
           "editable": true,
@@ -1355,7 +1528,7 @@
         {
           "title": "Query Parameters",
           "name": "query_params",
-          "description": "(Optional) Specify any optional parameters to add to the URL and refine the request. ",
+          "description": "(Optional) Specify any optional parameters to add to the URL and refine the request.",
           "type": "json",
           "visible": true,
           "editable": true,
@@ -1368,7 +1541,7 @@
           "editable": true,
           "visible": true,
           "required": false,
-          "description": "(Optional) Specify data, as JSON, to be sent as the request payload (typically for POST or PUT requests). "
+          "description": "(Optional) Specify data, as JSON, to be sent as the request payload (typically for POST or PUT requests)."
         }
       ],
       "output_schema": {}

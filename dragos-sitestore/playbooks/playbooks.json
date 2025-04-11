@@ -2,342 +2,42 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "fc84554c-f30c-4492-9344-9b1c06ee8aba",
       "@type": "WorkflowCollection",
+      "name": "Sample - Dragos SiteStore - 1.0.0",
+      "description": "Sample playbooks for \"Dragos SiteStore\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
+      "visible": true,
+      "image": null,
+      "uuid": "fc84554c-f30c-4492-9344-9b1c06ee8aba",
+      "id": 83,
+      "deletedAt": null,
+      "importedBy": [],
+      "recordTags": [
+        "Dragos",
+        "dragos-sitestore"
+      ],
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "70b2c766-8298-42f1-933b-9576098b8f16",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "72ff9d57-50d8-4fd2-8876-caebe2ad2fd5",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "bf225a87-3366-41cc-94e8-868d27f7fb4a",
-              "@type": "WorkflowStep",
-              "name": "Get All Assets",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Dragos SiteStore",
-                "config": "",
-                "params": {
-                  "createdAtAfter": "",
-                  "createdAtBefore": "",
-                  "lastSeenAtAfter": "",
-                  "lastSeenAtBefore": "",
-                  "is_deleted": "",
-                  "overlaps_starttime": "",
-                  "overlaps_endtime": "",
-                  "maskAddress_starttime": "",
-                  "maskAddress_endtime": "",
-                  "sort_by": "",
-                  "order_by": "",
-                  "pageSize": "",
-                  "pageNumber": "",
-                  "limitTotalCount": "",
-                  "additional_fields": ""
-                },
-                "version": "1.0.0",
-                "connector": "dragos-sitestore",
-                "operation": "get_assets",
-                "operationTitle": "Get All Assets"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
           "triggerLimit": null,
-          "description": "Retrieves all details associated with an assets from Dragos SiteStore based on the filter parameters that you have specified.",
-          "name": "Get All Assets",
+          "name": "Get All Vulnerabilities",
+          "aliasName": null,
           "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
+          "description": "Retrieves all details associated with an vulnerabilities from Dragos SiteStore based on the filter parameters that you have specified.",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/72ff9d57-50d8-4fd2-8876-caebe2ad2fd5",
-          "routes": [
-            {
-              "uuid": "152e3048-c7e4-4867-8da7-4e6e8d89c5ac",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get All Assets",
-              "sourceStep": "/api/3/workflow_steps/72ff9d57-50d8-4fd2-8876-caebe2ad2fd5",
-              "targetStep": "/api/3/workflow_steps/bf225a87-3366-41cc-94e8-868d27f7fb4a"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "8c0ce095-8df2-4040-a56c-5b2455e32245",
+          "lastModifyDate": null,
           "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/8859b1c1-3951-48e1-baec-8b5148d576fd",
           "steps": [
             {
-              "uuid": "ac1d6d6b-6d40-4615-9208-c35b35d562e5",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "a7bda72e-a7a7-4391-b38c-686ecb818821",
-              "@type": "WorkflowStep",
-              "name": "Get All Notifications",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Dragos SiteStore",
-                "config": "",
-                "params": {
-                  "filter": "",
-                  "sorts": "",
-                  "sortField": "",
-                  "sortDescending": "",
-                  "resolveChildrenDepth": "",
-                  "pageSize": "",
-                  "pageNumber": "",
-                  "limitTotalCount": "",
-                  "additional_fields": ""
-                },
-                "version": "1.0.0",
-                "connector": "dragos-sitestore",
-                "operation": "get_notifications",
-                "operationTitle": "Get All Notifications"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves all details associated with an notifications from Dragos SiteStore based on the filter parameters that you have specified.",
-          "name": "Get All Notifications",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ac1d6d6b-6d40-4615-9208-c35b35d562e5",
-          "routes": [
-            {
-              "uuid": "859d5f56-10c5-4d0e-8b6d-67093178c4fa",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get All Notifications",
-              "sourceStep": "/api/3/workflow_steps/ac1d6d6b-6d40-4615-9208-c35b35d562e5",
-              "targetStep": "/api/3/workflow_steps/a7bda72e-a7a7-4391-b38c-686ecb818821"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "af9207e5-c2e1-43d3-9fc3-2f1a73d94bfd",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "3d0ff104-bca1-4e6c-95fd-290e7af0c2c3",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "bdb45d55-b136-49b5-a09c-43f535e5e22c",
-              "@type": "WorkflowStep",
-              "name": "Get Notifications Details",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Dragos SiteStore",
-                "config": "",
-                "params": {
-                  "ids": "",
-                  "resolveChildrenDepth": "",
-                  "includeConversations": true
-                },
-                "version": "1.0.0",
-                "connector": "dragos-sitestore",
-                "operation": "get_notification_details",
-                "operationTitle": "Get Notifications Details"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves a details for one or more notifications from Dragos SiteStore based on the notification ID's and other input parameters that you have specified.",
-          "name": "Get Notifications Details",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/3d0ff104-bca1-4e6c-95fd-290e7af0c2c3",
-          "routes": [
-            {
-              "uuid": "be4b59ec-b088-4f21-a182-3f0a3a8bbb91",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get Notifications Details",
-              "sourceStep": "/api/3/workflow_steps/3d0ff104-bca1-4e6c-95fd-290e7af0c2c3",
-              "targetStep": "/api/3/workflow_steps/bdb45d55-b136-49b5-a09c-43f535e5e22c"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "fe55e671-23af-4816-b781-ce5bbe199e7c",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "7d1765ee-f08a-45b8-b6e4-e499a2742bee",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "0e3caeef-cb08-4fb9-aac8-ed826d04d5ce",
-              "@type": "WorkflowStep",
-              "name": "Get Statistics of Notification",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "name": "Dragos SiteStore",
-                "config": "",
-                "params": {
-                  "groupBy": "",
-                  "filter": ""
-                },
-                "version": "1.0.0",
-                "connector": "dragos-sitestore",
-                "operation": "get_stats_of_notification",
-                "operationTitle": "Get Statistics of Notification"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves a statistics for a specific notification from Dragos SiteStore based on the group by or filter parameters that you have specified.",
-          "name": "Get Statistics of Notification",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/7d1765ee-f08a-45b8-b6e4-e499a2742bee",
-          "routes": [
-            {
-              "uuid": "07b1b508-583f-4765-b09b-1498852b3f26",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get Statistics of Notification",
-              "sourceStep": "/api/3/workflow_steps/7d1765ee-f08a-45b8-b6e4-e499a2742bee",
-              "targetStep": "/api/3/workflow_steps/0e3caeef-cb08-4fb9-aac8-ed826d04d5ce"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "42a45603-63ae-491d-b9a1-77d950cc6992",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "8859b1c1-3951-48e1-baec-8b5148d576fd",
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "status": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  }
-                }
-              },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "1f5a6e60-caae-4056-aa39-6a83c29f8617",
               "@type": "WorkflowStep",
               "name": "Get All Vulnerabilities",
               "description": null,
-              "status": null,
               "arguments": {
                 "name": "Dragos SiteStore",
                 "config": "",
@@ -350,10 +50,10 @@
                   "additional_fields": {
                     "selector": {
                       "idIn": "",
-                      "valueMatches": "",
-                      "anyOf": "",
                       "allOf": "",
-                      "noneOf": ""
+                      "anyOf": "",
+                      "noneOf": "",
+                      "valueMatches": ""
                     }
                   }
                 },
@@ -362,48 +62,17 @@
                 "operation": "get_vulnerabilities",
                 "operationTitle": "Get All Vulnerabilities"
               },
-              "left": "188",
+              "status": null,
               "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves all details associated with an vulnerabilities from Dragos SiteStore based on the filter parameters that you have specified.",
-          "name": "Get All Vulnerabilities",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/8859b1c1-3951-48e1-baec-8b5148d576fd",
-          "routes": [
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "1f5a6e60-caae-4056-aa39-6a83c29f8617"
+            },
             {
-              "uuid": "85ff7fa8-06f9-42eb-aee2-de2e7ac68371",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get All Vulnerabilities",
-              "sourceStep": "/api/3/workflow_steps/8859b1c1-3951-48e1-baec-8b5148d576fd",
-              "targetStep": "/api/3/workflow_steps/1f5a6e60-caae-4056-aa39-6a83c29f8617"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "e04348fa-afc8-4bf9-b31d-cdef1e676a77",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "d49941e1-2b6a-4ac2-b87c-6464afcf702a",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
-              "status": null,
               "arguments": {
                 "step_variables": {
                   "input": {
@@ -411,82 +80,108 @@
                   }
                 }
               },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "618bed41-a264-44b3-ba45-109807950359",
-              "@type": "WorkflowStep",
-              "name": "Get All Vulnerability Detections",
-              "description": null,
               "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "8859b1c1-3951-48e1-baec-8b5148d576fd"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Get All Vulnerabilities",
+              "targetStep": "/api/3/workflow_steps/1f5a6e60-caae-4056-aa39-6a83c29f8617",
+              "sourceStep": "/api/3/workflow_steps/8859b1c1-3951-48e1-baec-8b5148d576fd",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "85ff7fa8-06f9-42eb-aee2-de2e7ac68371"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "42a45603-63ae-491d-b9a1-77d950cc6992",
+          "id": 1526,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get All Assets",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves all details associated with an assets from Dragos SiteStore based on the filter parameters that you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1744284024,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/72ff9d57-50d8-4fd2-8876-caebe2ad2fd5",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get All Assets",
+              "description": null,
               "arguments": {
                 "name": "Dragos SiteStore",
-                "config": "",
+                "config": "0ba2854c-e1e3-44b6-bbca-97c45c82e35c",
                 "params": {
                   "sort_by": "",
                   "order_by": "",
                   "pageSize": "",
+                  "is_deleted": "",
                   "pageNumber": "",
+                  "createdAtAfter": "",
+                  "createdAtBefore": "",
+                  "lastSeenAtAfter": "",
                   "limitTotalCount": "",
+                  "lastSeenAtBefore": "",
+                  "overlaps_endtime": "",
                   "additional_fields": {
                     "selector": {
-                      "idIn": "",
-                      "valueMatches": "",
-                      "anyOf": "",
                       "allOf": "",
-                      "noneOf": ""
+                      "anyOf": "",
+                      "isDeleted": "",
+                      "idOrOldIdIn": ""
                     }
-                  }
+                  },
+                  "overlaps_starttime": "",
+                  "maskAddress_endtime": "",
+                  "maskAddress_starttime": ""
                 },
                 "version": "1.0.0",
                 "connector": "dragos-sitestore",
-                "operation": "get_vulnerability_detections",
-                "operationTitle": "Get All Vulnerability Detections"
+                "operation": "get_assets",
+                "operationTitle": "Get All Assets",
+                "pickFromTenant": false,
+                "step_variables": []
               },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves all detections details associated with an vulnerability from Dragos SiteStore based on the filter parameters that you have specified.",
-          "name": "Get All Vulnerability Detections",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/d49941e1-2b6a-4ac2-b87c-6464afcf702a",
-          "routes": [
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "9259d8ea-cc8b-42ee-9292-996d4040dfa3"
+            },
             {
-              "uuid": "cbab5901-7ffa-4822-8ebe-b243cab21922",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get All Vulnerability Detections",
-              "sourceStep": "/api/3/workflow_steps/d49941e1-2b6a-4ac2-b87c-6464afcf702a",
-              "targetStep": "/api/3/workflow_steps/618bed41-a264-44b3-ba45-109807950359"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "dcb78d03-94c7-4f0b-babb-c31b0b6c8e33",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "6557f812-5d4a-40d8-b610-939fd6e7db83",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
-              "status": null,
               "arguments": {
                 "step_variables": {
                   "input": {
@@ -494,34 +189,352 @@
                   }
                 }
               },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "e2f766bc-8910-45f9-b0bf-4060188a3a4b",
-              "@type": "WorkflowStep",
-              "name": "Get All Detections",
-              "description": null,
               "status": null,
+              "top": "30",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "72ff9d57-50d8-4fd2-8876-caebe2ad2fd5"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get All Assets",
+              "targetStep": "/api/3/workflow_steps/9259d8ea-cc8b-42ee-9292-996d4040dfa3",
+              "sourceStep": "/api/3/workflow_steps/72ff9d57-50d8-4fd2-8876-caebe2ad2fd5",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "98fb01c7-3d58-4e77-bb12-a2ae4a89d57c"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "70b2c766-8298-42f1-933b-9576098b8f16",
+          "id": 1522,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get All Notifications",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves all details associated with an notifications from Dragos SiteStore based on the filter parameters that you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/ac1d6d6b-6d40-4615-9208-c35b35d562e5",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get All Notifications",
+              "description": null,
               "arguments": {
                 "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
-                  "includeFields": "",
-                  "excludeFields": "",
+                  "sorts": "",
+                  "filter": "",
+                  "pageSize": "",
+                  "sortField": "",
+                  "pageNumber": "",
+                  "sortDescending": "",
+                  "limitTotalCount": "",
+                  "additional_fields": "",
+                  "resolveChildrenDepth": ""
+                },
+                "version": "1.0.0",
+                "connector": "dragos-sitestore",
+                "operation": "get_notifications",
+                "operationTitle": "Get All Notifications"
+              },
+              "status": null,
+              "top": "120",
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "a7bda72e-a7a7-4391-b38c-686ecb818821"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "ac1d6d6b-6d40-4615-9208-c35b35d562e5"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Get All Notifications",
+              "targetStep": "/api/3/workflow_steps/a7bda72e-a7a7-4391-b38c-686ecb818821",
+              "sourceStep": "/api/3/workflow_steps/ac1d6d6b-6d40-4615-9208-c35b35d562e5",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "859d5f56-10c5-4d0e-8b6d-67093178c4fa"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "8c0ce095-8df2-4040-a56c-5b2455e32245",
+          "id": 1523,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Execute an API Request",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Sends an API request to any Dragos SiteStore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/bbf08547-5c13-454f-80d0-ce3cd2732906",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Execute an API Request",
+              "description": null,
+              "arguments": {
+                "name": "Dragos SiteStore",
+                "config": "",
+                "params": {
+                  "method": "",
+                  "payload": "",
+                  "endpoint": "",
+                  "query_params": ""
+                },
+                "version": "1.0.0",
+                "connector": "dragos-sitestore",
+                "operation": "execute_an_api_call",
+                "operationTitle": "Execute an API Request"
+              },
+              "status": null,
+              "top": "120",
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "5a56afc3-2378-49b3-89d7-90e6788b4812"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "bbf08547-5c13-454f-80d0-ce3cd2732906"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Execute an API Request",
+              "targetStep": "/api/3/workflow_steps/5a56afc3-2378-49b3-89d7-90e6788b4812",
+              "sourceStep": "/api/3/workflow_steps/bbf08547-5c13-454f-80d0-ce3cd2732906",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "74937384-d81e-4bf3-861c-f0ed4b4a5da3"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "9a5056b9-9a4e-4325-a703-cd01a194efcd",
+          "id": 1529,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get Notifications Details",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves a details for one or more notifications from Dragos SiteStore based on the notification ID's and other input parameters that you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/3d0ff104-bca1-4e6c-95fd-290e7af0c2c3",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Notifications Details",
+              "description": null,
+              "arguments": {
+                "name": "Dragos SiteStore",
+                "config": "",
+                "params": {
+                  "ids": "",
+                  "includeConversations": true,
+                  "resolveChildrenDepth": ""
+                },
+                "version": "1.0.0",
+                "connector": "dragos-sitestore",
+                "operation": "get_notification_details",
+                "operationTitle": "Get Notifications Details"
+              },
+              "status": null,
+              "top": "120",
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "bdb45d55-b136-49b5-a09c-43f535e5e22c"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "3d0ff104-bca1-4e6c-95fd-290e7af0c2c3"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Get Notifications Details",
+              "targetStep": "/api/3/workflow_steps/bdb45d55-b136-49b5-a09c-43f535e5e22c",
+              "sourceStep": "/api/3/workflow_steps/3d0ff104-bca1-4e6c-95fd-290e7af0c2c3",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "be4b59ec-b088-4f21-a182-3f0a3a8bbb91"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "af9207e5-c2e1-43d3-9fc3-2f1a73d94bfd",
+          "id": 1524,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get All Detections",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves all detections from Dragos SiteStore based on the filter parameters that you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/6557f812-5d4a-40d8-b610-939fd6e7db83",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get All Detections",
+              "description": null,
+              "arguments": {
+                "name": "Dragos SiteStore",
+                "config": "",
+                "params": {
                   "sort_by": "",
                   "order_by": "",
                   "pageSize": "",
                   "pageNumber": "",
+                  "excludeFields": "",
+                  "includeFields": "",
                   "limitTotalCount": "",
                   "additional_fields": {
                     "selector": {
                       "idIn": "",
-                      "valueMatches": "",
-                      "anyOf": "",
                       "allOf": "",
-                      "noneOf": ""
+                      "anyOf": "",
+                      "noneOf": "",
+                      "valueMatches": ""
                     }
                   }
                 },
@@ -530,48 +543,17 @@
                 "operation": "get_detections",
                 "operationTitle": "Get All Detections"
               },
-              "left": "188",
+              "status": null,
               "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
-            }
-          ],
-          "triggerLimit": null,
-          "description": "Retrieves all detections from Dragos SiteStore based on the filter parameters that you have specified.",
-          "name": "Get All Detections",
-          "tag": "#Dragos SiteStore",
-          "recordTags": [
-            "Dragos",
-            "dragos-sitestore"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/6557f812-5d4a-40d8-b610-939fd6e7db83",
-          "routes": [
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "e2f766bc-8910-45f9-b0bf-4060188a3a4b"
+            },
             {
-              "uuid": "c643cbde-53ec-4953-93ff-f3732dafef40",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Get All Detections",
-              "sourceStep": "/api/3/workflow_steps/6557f812-5d4a-40d8-b610-939fd6e7db83",
-              "targetStep": "/api/3/workflow_steps/e2f766bc-8910-45f9-b0bf-4060188a3a4b"
-            }
-          ]
-        },
-        {
-          "@type": "Workflow",
-          "uuid": "9a5056b9-9a4e-4325-a703-cd01a194efcd",
-          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
-          "steps": [
-            {
-              "uuid": "bbf08547-5c13-454f-80d0-ce3cd2732906",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
-              "status": null,
               "arguments": {
                 "step_variables": {
                   "input": {
@@ -579,69 +561,232 @@
                   }
                 }
               },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "5a56afc3-2378-49b3-89d7-90e6788b4812",
-              "@type": "WorkflowStep",
-              "name": "Execute an API Request",
-              "description": null,
               "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "6557f812-5d4a-40d8-b610-939fd6e7db83"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Get All Detections",
+              "targetStep": "/api/3/workflow_steps/e2f766bc-8910-45f9-b0bf-4060188a3a4b",
+              "sourceStep": "/api/3/workflow_steps/6557f812-5d4a-40d8-b610-939fd6e7db83",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "c643cbde-53ec-4953-93ff-f3732dafef40"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "dcb78d03-94c7-4f0b-babb-c31b0b6c8e33",
+          "id": 1528,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get All Vulnerability Detections",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves all detections details associated with an vulnerability from Dragos SiteStore based on the filter parameters that you have specified.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/d49941e1-2b6a-4ac2-b87c-6464afcf702a",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get All Vulnerability Detections",
+              "description": null,
               "arguments": {
                 "name": "Dragos SiteStore",
                 "config": "",
                 "params": {
-                  "method": "",
-                  "endpoint": "",
-                  "query_params": "",
-                  "payload": ""
+                  "sort_by": "",
+                  "order_by": "",
+                  "pageSize": "",
+                  "pageNumber": "",
+                  "limitTotalCount": "",
+                  "additional_fields": {
+                    "selector": {
+                      "idIn": "",
+                      "allOf": "",
+                      "anyOf": "",
+                      "noneOf": "",
+                      "valueMatches": ""
+                    }
+                  }
                 },
                 "version": "1.0.0",
                 "connector": "dragos-sitestore",
-                "operation": "execute_an_api_call",
-                "operationTitle": "Execute an API Request"
+                "operation": "get_vulnerability_detections",
+                "operationTitle": "Get All Vulnerability Detections"
               },
-              "left": "188",
+              "status": null,
               "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "618bed41-a264-44b3-ba45-109807950359"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "d49941e1-2b6a-4ac2-b87c-6464afcf702a"
             }
           ],
-          "triggerLimit": null,
-          "description": "Sends an API request to any Dragos SiteStore API endpoint based on specified HTTP method, endpoint, and other input parameters that you have specified, enabling flexible API interactions tailored to user needs. ",
-          "name": "Execute an API Request",
-          "tag": "#Dragos SiteStore",
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Get All Vulnerability Detections",
+              "targetStep": "/api/3/workflow_steps/618bed41-a264-44b3-ba45-109807950359",
+              "sourceStep": "/api/3/workflow_steps/d49941e1-2b6a-4ac2-b87c-6464afcf702a",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "cbab5901-7ffa-4822-8ebe-b243cab21922"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "e04348fa-afc8-4bf9-b31d-cdef1e676a77",
+          "id": 1527,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Dragos",
             "dragos-sitestore"
-          ],
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get Statistics of Notification",
+          "aliasName": null,
+          "tag": "#Dragos SiteStore",
+          "description": "Retrieves a statistics for a specific notification from Dragos SiteStore based on the group by or filter parameters that you have specified.",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/bbf08547-5c13-454f-80d0-ce3cd2732906",
+          "lastModifyDate": null,
+          "collection": "/api/3/workflow_collections/fc84554c-f30c-4492-9344-9b1c06ee8aba",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/7d1765ee-f08a-45b8-b6e4-e499a2742bee",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Statistics of Notification",
+              "description": null,
+              "arguments": {
+                "name": "Dragos SiteStore",
+                "config": "",
+                "params": {
+                  "filter": "",
+                  "groupBy": ""
+                },
+                "version": "1.0.0",
+                "connector": "dragos-sitestore",
+                "operation": "get_stats_of_notification",
+                "operationTitle": "Get Statistics of Notification"
+              },
+              "status": null,
+              "top": "120",
+              "left": "188",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "0e3caeef-cb08-4fb9-aac8-ed826d04d5ce"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "status": null,
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "7d1765ee-f08a-45b8-b6e4-e499a2742bee"
+            }
+          ],
           "routes": [
             {
-              "uuid": "74937384-d81e-4bf3-861c-f0ed4b4a5da3",
               "@type": "WorkflowRoute",
+              "name": "Start-> Get Statistics of Notification",
+              "targetStep": "/api/3/workflow_steps/0e3caeef-cb08-4fb9-aac8-ed826d04d5ce",
+              "sourceStep": "/api/3/workflow_steps/7d1765ee-f08a-45b8-b6e4-e499a2742bee",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Execute an API Request",
-              "sourceStep": "/api/3/workflow_steps/bbf08547-5c13-454f-80d0-ce3cd2732906",
-              "targetStep": "/api/3/workflow_steps/5a56afc3-2378-49b3-89d7-90e6788b4812"
+              "group": null,
+              "uuid": "07b1b508-583f-4765-b09b-1498852b3f26"
             }
+          ],
+          "groups": [],
+          "priority": null,
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "fe55e671-23af-4816-b781-ce5bbe199e7c",
+          "id": 1525,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": [
+            "Dragos",
+            "dragos-sitestore"
           ]
         }
-      ],
-      "name": "Sample - Dragos SiteStore - 1.0.0",
-      "description": "Dragos SiteStore is a key component of the Dragos Platform, designed to enhance cybersecurity for industrial control systems (ICS) and operational technology (OT) environments. It serves as the management and reporting console for data collected by Dragos sensors, providing comprehensive visibility and threat detection capabilities.",
-      "visible": true,
-      "recordTags": [
-        "Dragos",
-        "dragos-sitestore"
       ]
     }
+  ],
+  "exported_tags": [
+    "Dragos",
+    "dragos-sitestore"
   ]
 }
